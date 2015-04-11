@@ -1,0 +1,23 @@
+{
+  "name": "voxel-background-music",
+  "version": "1.0.0",
+  "description": "Background music plugin for VoxelJS",
+  "main": "background.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/z3t0/voxel-background-music"
+  },
+  "keywords": [
+    "voxeljs",
+    "sound"
+  ],
+  "author": "z3t0",
+  "license": "GPLv3",
+  "bugs": {
+    "url": "https://github.com/z3t0/voxel-background-music/issues"
+  },
+  "homepage": "https://github.com/z3t0/voxel-background-music"
+}
