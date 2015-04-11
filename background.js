@@ -12,23 +12,23 @@ module.exports.pluginInfo = {
 
 function BackgroundMusicPlugin(game, opts) {
   this.game = game;
-
-  this.voxelSfx = game.plugins.get('voxel-sfx');
-  if(!this.voxelSfx) throw new Error('voxel-background-music requires voxel-sfx')
-
+  this.artPacks = this.game.materials.artPacks;
 
   this.enable();
 }
 
 BackgroundMusicPlugin.prototype.enable = function() {
   var self = this;
-  this.voxelSfx.play('damage/fallsmall');
+  this.game.materials.artPacks.on('loadedAll', this.loaded = function(){
+    this.voxelSfx = game.plugins.get('voxel-sfx');
+    if(!this.voxelSfx) throw new Error('voxel-background-music requires voxel-sfx')
+    this.voxelSfx.play('random/background', true);
+  });
   // Register listeners
   console.log("PLAYING BACKGROUND")
 
 }
 
 BackgroundMusicPlugin.prototype.disable = function() {
-  // Remove Listeners
-  // TODO add control to voxel-sfx
+
 }
