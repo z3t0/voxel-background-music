@@ -25,7 +25,7 @@ BackgroundMusicPlugin.prototype.enable = function() {
   if(!this.voxelSfx) throw new Error('voxel-background-music requires voxel-sfx')
 
   self.game.materials.artPacks.on('loadedAll', this.loaded = function(){
-    self.voxelSfx.play('random/background', true);
+    self.voxelSfx.play('random/background', true, 0.7);
   });
   console.log("PLAYING BACKGROUND")
 
